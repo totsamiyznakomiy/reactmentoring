@@ -42,7 +42,7 @@ const Menu = ({ onItemBuy }) => {
     ]
 
     return (
-        <div classname="mx-auto grid gap-2 grid-cols-2 md:grid-cols-3 xl:grid-cols-4 container">
+        <div className="mx-auto grid gap-2 grid-cols-2 md:grid-cols-3 xl:grid-cols-4 container">
             {dishes.map((item) =>
                 (<MenuCard item={item} onClickBuy={onItemBuy} />))}
         </div>);
