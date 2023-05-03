@@ -14,8 +14,8 @@ function App() {
           <div className="text-xl">Basket</div>
           <div>Тumber of goods:{cart.lenght}</div>
           <div>
-            Total:{cart.reduce((sum, item) => (sum += item.sellingPrice), 0) } usd
-            </div>
+            Total:{cart.reduce((sum, item) => (sum += item.sellingPrice), 0)} THB
+          </div>
         </div>
       </div>
       <Menu onItemBuy={(item => addToCart(item))}></Menu>

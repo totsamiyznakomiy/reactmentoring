@@ -1,49 +1,33 @@
 import MenuCard from "./MenuCard";
 
 const Menu = ({ onItemBuy }) => {
-    let dishes = [
+    let cannabise = [
         {
-            name: "Chocolate chip cookies",
-            sellingPrice: 100,
-            ingredients: [
-                "flour",
-                "sugar",
-                "butter",
-                "eggs",
-                "salt"
-            ],
-
-            image: "/jpeg/chockolate.jpg",
+            name: "King Bong",
+            sellingPrice: 400,
+            thc: "THC - 25%",
+            Sativa: "Sativa - 70%",
+            image: "/jpeg/kingBong.jpeg",
         },
         {
-            name: "Spaghetti with meatballs",
-            sellingPrice: 300,
-            ingredients: [
-                "pasta",
-                "groundBeef",
-                "tomatoSauce",
-                "breadCrumbs",
-                "eggs"
-            ],
-            image: "/jpeg/spaghetti.jpeg",
+            name: "Bruce Banner",
+            sellingPrice: 350,
+            thc: "THC - 20%",
+            Sativa: "Sativa - 80%",
+            image: "/jpeg/bruceBanner.jpeg",
         },
         {
-            name: "Chicken stir-fry",
-            sellingPrice: 200,
-            ingredients: [
-                "chickenBreast",
-                "vegetables",
-                "soySauce",
-                "cornstarch",
-                "rice"
-            ],
-            image: "/jpeg/chiken.jpg",
+            name: "OG",
+            sellingPrice: 420,
+            thc: "THC - 28%",
+            Sativa: "Sativa - 60%",
+            image: "/jpeg/OG.jpeg",
         }
     ]
 
     return (
-        <div className="mx-auto grid gap-2 grid-cols-2 md:grid-cols-3 xl:grid-cols-4 container">
-            {dishes.map((item) =>
+        <div className="mx-auto grid gap-10 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 container">
+            {cannabise.map((item) =>
                 (<MenuCard item={item} onClickBuy={onItemBuy} />))}
         </div>);
 };
