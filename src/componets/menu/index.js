@@ -5,22 +5,28 @@ const Menu = ({ onItemBuy }) => {
         {
             name: "King Bong",
             sellingPrice: 400,
-            thc: "THC - 25%",
-            Sativa: "Sativa - 70%",
+            content: [
+                "THC - 25%",
+                "Sativa - 70%",
+            ],
             image: "/jpeg/kingBong.jpeg",
         },
         {
             name: "Bruce Banner",
             sellingPrice: 350,
-            thc: "THC - 20%",
-            Sativa: "Sativa - 80%",
+            content: [
+                "THC - 20%",
+                "Sativa - 80%",
+            ],
             image: "/jpeg/bruceBanner.jpeg",
         },
         {
             name: "OG",
             sellingPrice: 420,
-            thc: "THC - 28%",
-            Sativa: "Sativa - 60%",
+            content: [
+                "THC - 28%",
+                "Sativa - 60%",
+            ],
             image: "/jpeg/OG.jpeg",
         }
     ]
