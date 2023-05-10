@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import CartWidget from "./components/CartWidget";
-import DarkThemeSwitcher from "./components/DarkThemeSwithcer";
+import DarkThemeSwitcher from "./components/DarkThemeSwitcher";
 import { Outlet } from "react-router-dom";
 import MainMenu from "./components/MainMenu";
 
