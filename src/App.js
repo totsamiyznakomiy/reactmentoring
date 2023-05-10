@@ -1,18 +1,21 @@
-import { useState } from 'react';
-import './App.css';
-import { Outlet } from 'react-router-dom';
-import DarkThemeSwitcher from './componets/DarkThemeSwitcher';
-import MainMenu from './componets/MainMenu';
-import CartWidget from './componets/CartWidget';
+import "./App.css";
+import { useState } from "react";
+import CartWidget from "./components/CartWidget";
+import DarkThemeSwitcher from "./components/DarkThemeSwithcer";
+import { Outlet } from "react-router-dom";
+import MainMenu from "./components/MainMenu";
 
 function App() {
   const [cart, setCart] = useState([]);
-  const addToCart = item => {
+
+  const addToCart = (item) => {
     setCart([...cart, item]);
   };
+
   const setDarkTheme = (value) => {
-    setCart([...cart, item]);
+    setThemeDark(value);
   };
+
   const [themeDark, setThemeDark] = useState(false);
 
   return (
