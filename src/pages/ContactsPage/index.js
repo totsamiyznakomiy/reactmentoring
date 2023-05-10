@@ -1,9 +1,10 @@
 const ContactsPage = () => {
     return (
-        <div>
-            Our number telephone:
-            <a href="tel:+66980045698">+66980045698</a>
-        </div>
+      <div>
+        Наш номер телефона:
+        <a href="tel:+79000000000">+79000000000</a>
+      </div>
     );
-};
-export default ContactsPage;
+  };
+  
+  export default ContactsPage;

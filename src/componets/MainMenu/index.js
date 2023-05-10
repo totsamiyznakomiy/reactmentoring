@@ -1,11 +1,9 @@
-import MenuCard from "../MenuCard";
-
 import { Link } from "react-router-dom";
 
 const MainMenu = () => {
   let menuItems = [
-    { title: "Main", link: "/" },
-    { title: "About us", link: "/about" },
+    { title: "Главная", link: "/" },
+    { title: "О нас", link: "/about" },
   ];
   return (
     <div className="flex gap-6">
