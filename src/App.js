@@ -1,24 +1,32 @@
 import { useState } from 'react';
 import './App.css';
-import Menu from './componets/menu';
+import { Outlet } from 'react-router-dom';
+import DarkThemeSwitcher from './componets/DarkThemeSwitcher';
+import MainMenu from './componets/MainMenu';
+import CartWidget from './componets/CartWidget';
 
 function App() {
   const [cart, setCart] = useState([]);
   const addToCart = item => {
     setCart([...cart, item]);
   };
+  const setDarkTheme = (value) => {
+    setCart([...cart, item]);
+  };
+  const [themeDark, setThemeDark] = useState(false);
+
   return (
-    <div className="App p-2">
-      <div className="mx-auto my-5 container flex flex-row-reverse text-right">
-        <div>
-          <div className="text-xl">Basket</div>
-          <div>Тumber of goods:{cart.lenght}</div>
-          <div>
-            Total:{cart.reduce((sum, item) => (sum += item.sellingPrice), 0)} THB
-          </div>
-        </div>
+    <div
+      className={
+        "p-2 min-h-screen " + (themeDark ? "dark bg-slate-950 text-white" : "")
+      }
+    >
+      <div className="container mx-auto">
+        <DarkThemeSwitcher darkTheme={themeDark} setDarkTheme={setDarkTheme} />
+        <MainMenu />
+        <CartWidget cart={cart} />
+        <Outlet></Outlet>
       </div>
-      <Menu onItemBuy={(item => addToCart(item))}></Menu>
     </div>
   );
 }
