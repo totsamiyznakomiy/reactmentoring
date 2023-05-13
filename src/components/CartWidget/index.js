@@ -8,7 +8,7 @@ const CartWidget = ({ cart }) => {
           <CartIcon /> X {cart.length}
         </div>
         <div>
-          Сумма: {cart.reduce((sum, item) => (sum += item.price), 0)} руб
+          Total: {cart.reduce((sum, item) => (sum += item.price), 0)} THB
         </div>
       </div>
     </div>

@@ -1,39 +1,26 @@
 let menu = [
     {
       id: 1,
-      name: "Куриная",
-      price: 500,
-      ingredients: ["Грибы", "Курица", "Сыр", "Томатный соус"],
-      image: "/assets/pizza.jpeg",
+      name: "OG",
+      price: 400,
+      ingredients:["THC - 28%", "Sativa - 70%"],
+      image: "/jpeg/OG.jpeg",
     },
     {
       id: 2,
-      name: "Колбасная",
-      price: 500,
-      ingredients: ["Грибы", "Колбаса", "Сыр", "Томатный соус"],
-      image: "/assets/pizza.jpeg",
+      name: "King Bong",
+      price: 380,
+      ingredients: ["THC - 25%","Sativa - 80%"],
+      image: "/jpeg/kingBong.jpeg",
     },
     {
       id: 3,
-      name: "Ананасная",
-      price: 500,
-      ingredients: ["Грибы", "Ананас", "Сыр", "Томатный соус"],
-      image: "/assets/pizza.jpeg",
+      name: "Bruce Banner",
+      price: 420,
+      ingredients: ["THC - 27%","Sativa - 90%"],
+      image: "/jpeg/bruceBanner.jpeg",
     },
-    {
-      id: 4,
-      name: "Охотничья",
-      price: 500,
-      ingredients: ["Грибы", "Колбаски", "Сыр", "Томатный соус"],
-      image: "/assets/pizza.jpeg",
-    },
-    {
-      id: 5,
-      name: "Детская",
-      price: 500,
-      ingredients: ["Грибы", "Картофель фри", "Сыр", "Томатный соус"],
-      image: "/assets/pizza.jpeg",
-    },
+ 
   ];
   
   export default menu;

@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const MainMenu = () => {
   let menuItems = [
-    { title: "Главная", link: "/" },
-    { title: "О нас", link: "/about" },
+    { title: "Home", link: "/" },
+    { title: "About us", link: "/about" },
   ];
   return (
     <div className="flex gap-6">
