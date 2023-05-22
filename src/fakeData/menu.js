@@ -1,25 +1,32 @@
 let menu = [
     {
       id: 1,
-      name: "OG",
+      name: "Dirty Bird",
       price: 400,
       ingredients:["THC - 28%", "Sativa - 70%"],
-      image: "/jpeg/OG.jpeg",
+      image: "/jpeg/DirtyBird.jpg",
     },
     {
       id: 2,
-      name: "King Bong",
+      name: "Hippie Berry",
       price: 380,
       ingredients: ["THC - 25%","Sativa - 80%"],
-      image: "/jpeg/kingBong.jpeg",
+      image: "/jpeg/HippieBerry.jpg",
     },
     {
       id: 3,
-      name: "Bruce Banner",
+      name: "Streudle",
       price: 420,
       ingredients: ["THC - 27%","Sativa - 90%"],
-      image: "/jpeg/bruceBanner.jpeg",
+      image: "/jpeg/Streudle.jpg",
     },
+    {
+      id: 4,
+      name: "OG Kush",
+      price: 420,
+      ingredients: ["THC - 27%","Sativa - 90%"],
+      image: "/jpeg/OGKush.jpg",
+    }
  
   ];
   
