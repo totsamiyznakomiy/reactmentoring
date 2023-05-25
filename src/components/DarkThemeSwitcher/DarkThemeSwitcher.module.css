@@ -1,29 +1,29 @@
 .initial {
-    animation: back-rotate-keyframes 0.3s;
-    animation-direction: forwards;
+  animation: back-rotate-keyframes 0.3s;
+  animation-direction: forwards;
+}
+
+.rotate {
+  animation: rotate-keyframes 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotate-keyframes {
+  from {
+    transform: rotate(0deg);
   }
-  
-  .rotate {
-    animation: rotate-keyframes 0.3s;
-    animation-fill-mode: forwards;
+
+  to {
+    transform: rotate(180deg);
   }
-  
-  @keyframes rotate-keyframes {
-    from {
-      transform: rotate(0deg);
-    }
-  
-    to {
-      transform: rotate(180deg);
-    }
+}
+
+@keyframes back-rotate-keyframes {
+  from {
+    transform: rotate(180deg);
   }
-  
-  @keyframes back-rotate-keyframes {
-    from {
-      transform: rotate(180deg);
-    }
-  
-    to {
-      transform: rotate(0deg);
-    }
+
+  to {
+    transform: rotate(0deg);
   }
+}
