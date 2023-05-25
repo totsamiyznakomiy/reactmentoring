@@ -1,26 +1,29 @@
 import { Link } from "react-router-dom";
 import style from "./MenuCard.module.css";
+import { addToCart } from "../../store/slices/cartSlice";
+import { useDispatch } from "react-redux";
 
-const MenuCard = ({ item, onClickBuy = () => {} }) => {
+const MenuCard = ({ item }) => {
+  const dispatch = useDispatch();
   const ingredients = (
-    <div className="text-white text-xs">{item.ingredients.join(", ")}</div>
+    <div className="text-xs">{item.ingredients.join(", ")}</div>
   );
 
   return (
     <div
       className={
-        "bg-transparent rounded overflow-hidden shadow-lg dark:bg-slate-900 " + style.card
+        "bg-orange-300 rounded-2xl overflow-hidden shadow-lg" + style.card
       }
     >
       <img src={item.image} className="w-full" />
       <div className="p-2">
         <Link to={`/catalog/${item.id}`}>
-          <div className={"text-white text-2xl font-bold " + style.title}>{item.name}</div>
+          <div className={"text-2xl font-bold " + style.title}>{item.name}</div>
         </Link>
         <div className="py-2">{ingredients}</div>
         <button
-          onClick={() => onClickBuy(item)}
-          className="w-full bg-transparent hover:bg-green-500 text-green-700 font-semibold hover:text-white py-2 px-4 border border-green-500 hover:border-transparent rounded"
+          onClick={() => dispatch(addToCart(item))}
+          className="w-full bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded"
         >
           Buy
         </button>
