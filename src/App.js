@@ -16,8 +16,6 @@ function App() {
     setThemeDark(value);
   };
 
-  const [themeDark, setThemeDark] = useState(false);
-
   return (
     <div
       className={
