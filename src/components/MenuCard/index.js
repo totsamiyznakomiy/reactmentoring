@@ -12,7 +12,7 @@ const MenuCard = ({ item }) => {
   return (
     <div
       className={
-        "bg-orange-300 rounded-2xl overflow-hidden shadow-lg" + style.card
+        "bg-gray-300 rounded-2xl overflow-hidden shadow-lg" + style.card
       }
     >
       <img src={item.image} className="w-full" />
@@ -23,7 +23,7 @@ const MenuCard = ({ item }) => {
         <div className="py-2">{ingredients}</div>
         <button
           onClick={() => dispatch(addToCart(item))}
-          className="w-full bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded"
+          className="w-full bg-transparent hover:bg-orange-500 text-orange-700 font-semibold hover:text-black py-2 px-4 border border-orange-500 hover:border-transparent rounded"
         >
           Buy
         </button>
