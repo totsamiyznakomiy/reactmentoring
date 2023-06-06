@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { loadMenu } from "../../store/slices/menuSlice";
 import { useEffect } from "react";
 import LoadingError from "../../components/LoadingError";
+import LoadingStart from "../../components/LoadingStart";
 
 const Menu = () => {
   const menu = useSelector((state) => state.menu);
@@ -16,7 +17,7 @@ const Menu = () => {
 
   return (
     <>
-      {menu.loading == "fulfilled" && (
+      {menu.loading === "fulfilled" && (
         <div className={"grid gap-4 grid-cols-2 md:grid-cols-3 xl:grid-cols-4"}>
           {menu.items.map((item) => (
             <MenuCard item={item} />
@@ -24,14 +25,12 @@ const Menu = () => {
         </div>
       )}
 
-      {menu.loading == "pending" && (
-        <div className="flex justify-center items-center h-[70vh]">
-          Загрузка...
-        </div>
+      {menu.loading === "pending" && (
+        <LoadingStart message="Loading in progress" />
       )}
 
-      {menu.loading == "rejected" && (
-        <LoadingError message="Произошла ошибка при загрузке данных меню" />
+      {menu.loading === "rejected" && (
+        <LoadingError message="Error loading data" />
       )}
     </>
   );

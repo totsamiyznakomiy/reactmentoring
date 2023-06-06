@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const initialState = { items: [], loading: "start" };
+const initialState = { items: [], loading: "Launch" };
 
 export const loadMenu = createAsyncThunk("menu/getMenu", async () => {
   return axios.get("/data/menu.json").then((r) => r.data);
