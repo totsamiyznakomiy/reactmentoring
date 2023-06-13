@@ -6,7 +6,7 @@ const MainMenu = () => {
     { title: "About us", link: "/about" },
   ];
   return (
-    <div className="flex gap-6">
+    <div className="flex gap-6 flex-centre py-5 px-5">
       {menuItems.map((item) => (
         <Link to={item.link}>{item.title}</Link>
       ))}

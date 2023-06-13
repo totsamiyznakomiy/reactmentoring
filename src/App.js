@@ -1,10 +1,11 @@
 import "./App.css";
-import { useState } from "react"; 
+import { useState } from "react";
 import CartWidget from "./components/CartWidget";
 import DarkThemeSwitcher from "./components/DarkThemeSwitcher";
 import { Outlet } from "react-router-dom";
 import MainMenu from "./components/MainMenu";
 import CartProvider from "./components/providers/CartProvider";
+import Logo from "./components/Logo";
 
 function App() {
   const [themeDark, setThemeDark] = useState(false);
@@ -20,6 +21,7 @@ function App() {
       }
     >
       <div className="container mx-auto">
+        <Logo></Logo>
         <DarkThemeSwitcher darkTheme={themeDark} setDarkTheme={setDarkTheme} />
         <MainMenu />
         <CartProvider>
