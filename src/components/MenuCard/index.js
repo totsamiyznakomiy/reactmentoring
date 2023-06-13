@@ -6,24 +6,24 @@ import { useDispatch } from "react-redux";
 const MenuCard = ({ item }) => {
   const dispatch = useDispatch();
   const ingredients = (
-    <div className="text-xs">{item.ingredients.join(", ")}</div>
+    <div className="text-s">{item.ingredients.join("/ ")}</div>
   );
 
   return (
     <div
       className={
-        "bg-gray-300 rounded-2xl overflow-hidden shadow-lg" + style.card
+        "rounded-xl overflow-hidden shadow-lg" + style.card
       }
     >
-      <img src={item.image} className="w-full" />
+      <img src={item.image} className="w-full" alt="" />
       <div className="p-2">
         <Link to={`/catalog/${item.id}`}>
           <div className={"text-2xl font-bold " + style.title}>{item.name}</div>
         </Link>
-        <div className="py-2">{ingredients}</div>
+        <div className="py-2 overline">{ingredients}</div>
         <button
           onClick={() => dispatch(addToCart(item))}
-          className="w-full bg-transparent hover:bg-orange-500 text-orange-700 font-semibold hover:text-black py-2 px-4 border border-orange-500 hover:border-transparent rounded"
+          className="w-full bg-transparent hover:bg-lime-500 text-lime-700 font-bold hover:text-black py-2 px-4 border border-lime-300 hover:border-transparent rounded-3xl"
         >
           Buy
         </button>
