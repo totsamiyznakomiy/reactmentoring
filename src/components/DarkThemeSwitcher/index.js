@@ -4,7 +4,7 @@ import style from "./DarkThemeSwitcher.module.css";
 const DarkThemeSwitcher = ({ darkTheme, setDarkTheme }) => {
   return (
     <button
-      className={`mx-auto px-2 ${style.initial} ${darkTheme && style.rotate}`}
+      className={`mx-auto px-5 py-5 ${style.initial} ${darkTheme && style.rotate}`}
       onClick={() => setDarkTheme(!darkTheme)}
     >
       <DarkThemeIcon darkTheme={darkTheme} />

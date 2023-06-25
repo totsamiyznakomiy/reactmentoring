@@ -5,7 +5,7 @@ import DarkThemeSwitcher from "./components/DarkThemeSwitcher";
 import { Outlet } from "react-router-dom";
 import MainMenu from "./components/MainMenu";
 import CartProvider from "./components/providers/CartProvider";
-import Logo from "./components/Logo";
+import Header from "./components/Logo";
 
 function App() {
   const [themeDark, setThemeDark] = useState(false);
@@ -21,7 +21,7 @@ function App() {
       }
     >
       <div className="container mx-auto">
-        <Logo></Logo>
+        <Header/>
         <DarkThemeSwitcher darkTheme={themeDark} setDarkTheme={setDarkTheme} />
         <MainMenu />
         <CartProvider>
